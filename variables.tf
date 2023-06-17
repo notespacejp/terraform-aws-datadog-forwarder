@@ -12,7 +12,7 @@ variable "function_name" {
 
 variable "dd_api_key_secret_arn" {
     type = string
-    description = "datadog api key secret arn"
+    description = "Secret manager arn where datadog api key are stored"
 }
 
 variable "dd_site" {

@@ -37,7 +37,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_dd_api_key_secret_arn"></a> [dd\_api\_key\_secret\_arn](#input\_dd\_api\_key\_secret\_arn) | datadog api key secret arn | `string` | n/a | yes |
+| <a name="input_dd_api_key_secret_arn"></a> [dd\_api\_key\_secret\_arn](#input\_dd\_api\_key\_secret\_arn) | Secret manager arn where datadog api key are stored | `string` | n/a | yes |
 | <a name="input_dd_cf_template_url"></a> [dd\_cf\_template\_url](#input\_dd\_cf\_template\_url) | datadog cloudformation template url | `string` | `"https://datadog-cloudformation-template.s3.amazonaws.com/aws/forwarder/latest.yaml"` | no |
 | <a name="input_dd_site"></a> [dd\_site](#input\_dd\_site) | datadog site | `string` | `"ap1.datadoghq.com"` | no |
 | <a name="input_function_name"></a> [function\_name](#input\_function\_name) | lambda function name | `string` | `"datadog-forwarder"` | no |
