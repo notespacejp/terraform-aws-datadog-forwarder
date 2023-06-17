@@ -32,6 +32,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_cloudformation_stack.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudformation_stack) | resource |
+| [aws_s3_bucket_notification.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_notification) | resource |
 
 ## Inputs
 
@@ -42,6 +43,7 @@ No modules.
 | <a name="input_dd_site"></a> [dd\_site](#input\_dd\_site) | datadog site | `string` | `"ap1.datadoghq.com"` | no |
 | <a name="input_function_name"></a> [function\_name](#input\_function\_name) | lambda function name | `string` | `"datadog-forwarder"` | no |
 | <a name="input_stack_name"></a> [stack\_name](#input\_stack\_name) | cf stack name | `string` | `"datadog-forwarder"` | no |
+| <a name="input_trigger_bucket_names"></a> [trigger\_bucket\_names](#input\_trigger\_bucket\_names) | list of bucket names to trigger lambda function | `list(string)` | n/a | yes |
 
 ## Outputs
 

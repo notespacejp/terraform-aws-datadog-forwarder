@@ -26,3 +26,8 @@ variable "dd_cf_template_url" {
     description = "datadog cloudformation template url"
     default = "https://datadog-cloudformation-template.s3.amazonaws.com/aws/forwarder/latest.yaml"
 }
+
+variable "trigger_bucket_names" {
+    type = list(string)
+    description = "list of bucket names to trigger lambda function"
+}

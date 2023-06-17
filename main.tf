@@ -17,3 +17,13 @@ resource "aws_cloudformation_stack" "this" {
     }
     template_url = var.dd_cf_template_url
 }
+
+
+resource "aws_s3_bucket_notification" "this" {
+    for_each = var.trigger_bucket_names
+    bucket = each.value
+    lambda_function {
+        lambda_function_arn = aws_cloudformation_stack.this.outputs["DatadogForwarderArn"]
+        events = ["s3:ObjectCreated:*"]
+    }
+}
