@@ -20,8 +20,8 @@ resource "aws_cloudformation_stack" "this" {
 
 
 resource "aws_s3_bucket_notification" "this" {
-    for_each = var.trigger_bucket_names
-    bucket = each.value
+    count = length(var.trigger_bucket_names)
+    bucket = var.trigger_bucket_names[count.index]
     lambda_function {
         lambda_function_arn = aws_cloudformation_stack.this.outputs["DatadogForwarderArn"]
         events = ["s3:ObjectCreated:*"]
