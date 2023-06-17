@@ -30,4 +30,5 @@ variable "dd_cf_template_url" {
 variable "trigger_bucket_names" {
     type = list(string)
     description = "list of bucket names to trigger lambda function"
+    default = []
 }
